@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VLOImageDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://upload.wikimedia.org/wikipedia/commons/6/62/STS-135_and_Expedition_28_joint_group_portrait.jpg" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P6-Hu-f0h">
+                                <rect key="frame" x="16" y="20" width="305" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urs-0z-0D8">
+                                <rect key="frame" x="329" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="suj-Ok-zyI"/>
+                                </constraints>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T3M-se-xdp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oSE-2T-k33">
+                                <rect key="frame" x="16" y="58" width="343" height="551"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwB-eo-B80">
+                                <rect key="frame" x="143" y="617" width="88" height="30"/>
+                                <state key="normal" title="Detect faces"/>
+                                <connections>
+                                    <action selector="detectFaces:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duN-RR-Rf9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9P6-Hu-f0h" firstAttribute="leading" secondItem="oSE-2T-k33" secondAttribute="leading" id="1jY-YD-t4l"/>
+                            <constraint firstItem="9P6-Hu-f0h" firstAttribute="top" secondItem="Urs-0z-0D8" secondAttribute="top" id="7qI-8R-vGX"/>
+                            <constraint firstItem="Urs-0z-0D8" firstAttribute="trailing" secondItem="oSE-2T-k33" secondAttribute="trailing" id="AHa-gc-Opv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UwB-eo-B80" secondAttribute="bottom" constant="20" id="Fof-U0-YyD"/>
+                            <constraint firstItem="9P6-Hu-f0h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ny5-Ed-Kdd"/>
+                            <constraint firstItem="UwB-eo-B80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P79-Ry-B38"/>
+                            <constraint firstItem="9P6-Hu-f0h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PVp-j2-dN0"/>
+                            <constraint firstItem="UwB-eo-B80" firstAttribute="top" secondItem="oSE-2T-k33" secondAttribute="bottom" constant="8" id="XXS-8W-5QD"/>
+                            <constraint firstItem="Urs-0z-0D8" firstAttribute="leading" secondItem="9P6-Hu-f0h" secondAttribute="trailing" constant="8" symbolic="YES" id="dvK-rl-KkY"/>
+                            <constraint firstItem="oSE-2T-k33" firstAttribute="top" secondItem="9P6-Hu-f0h" secondAttribute="bottom" constant="8" symbolic="YES" id="kgc-Q4-CCp"/>
+                            <constraint firstItem="Urs-0z-0D8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qX0-Gp-o0Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="URLTextField" destination="9P6-Hu-f0h" id="lND-Av-gYF"/>
+                        <outlet property="imageView" destination="oSE-2T-k33" id="6zk-BZ-US1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
