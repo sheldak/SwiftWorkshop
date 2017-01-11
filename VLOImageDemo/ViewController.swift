@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
         var szer=0
         var wys=0
-        var marg=0
+        var marg=0 
         var marg2=0
         
         if t<r {
